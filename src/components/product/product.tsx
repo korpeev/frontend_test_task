@@ -5,7 +5,7 @@ import { stateToHTML } from "draft-js-export-html";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { ChangeEvent, FocusEvent, useEffect, useState } from "react";
 import { UploadImage } from "./components/upload-image";
-import { CitiesPrice } from "components/product/components/CitiesPrice/CitiesPrice";
+import { CitiesPriceContainer } from "components/product/components/CitiesPrice/cities-price-container";
 import { Product as ProductModel } from "common/entity.types";
 import { productService } from "services/product.service";
 import { useAlertContext, useProductContext } from "hooks/context";
@@ -192,7 +192,7 @@ export const Product = ({ isEdit }: { isEdit: boolean }) => {
             )}
           </div>
         </div>
-        {!values.onePriceAllCities && <CitiesPrice />}
+        {!values.onePriceAllCities && <CitiesPriceContainer />}
         <div className="flex items-center justify-between mt-5">
           <Button onClick={() => navigate("/products")} className="bg-red-400">
             Отмена

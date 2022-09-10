@@ -3,7 +3,7 @@ import { FC } from "react";
 import { CityPriceItem } from "components/product/components/CitiesPrice/city-price-item";
 import { useProductContext } from "hooks/context";
 
-export const CitiesPrice: FC = () => {
+export const CitiesPriceContainer: FC = () => {
   const { cities, setCities } = useProductContext();
   return (
     <div className="mt-5">

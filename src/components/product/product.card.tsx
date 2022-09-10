@@ -1,11 +1,14 @@
 import { Button } from "components/ui/Button";
 import { FC } from "react";
-import { ProductCardProps } from "./models";
 import { formatNumber } from "utils/formatNumber";
 import { useProductContext } from "hooks/context";
 import { useNavigate } from "react-router-dom";
+import { Product } from "common/entity.types";
 
-export const ProductCard: FC<ProductCardProps> = ({ product }) => {
+export interface Props {
+  product: Product;
+}
+export const ProductCard: FC<Props> = ({ product }) => {
   const { removeProduct } = useProductContext();
   const navigate = useNavigate();
   const getPrice = Array.isArray(product.price)

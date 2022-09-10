@@ -1,1 +1,1 @@
-export * from "./CitiesPrice";
+export * from "./cities-price-container";
